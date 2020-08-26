@@ -1,0 +1,10 @@
+@model ResidentDirectory.ViewModels.ResidentList
+<h1>View Residents with Children</h1>
+@foreach (ResidentModel resident in @Model.residents)
+{
+    @if(@resident.hasChildren)
+    {
+        <partial name = "_ResidentDetails" model = "resident"/>
+    }
+}
+
